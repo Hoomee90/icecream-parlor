@@ -10,7 +10,7 @@ function NewBucketForm(props) {
       name: event.target.name.value,
       description: event.target.name.description,
       price: event.target.description.value,
-      vegan: event.target.vegan.value,
+      vegan: event.target?.vegan.value ? true : false,
       quantity: 120,
       id: v4()
     });
