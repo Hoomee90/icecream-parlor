@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Badge from "react-bootstrap/Badge";
 
 function Bucket(props) {
   const scoopsLeft = props.quantity > 0;
@@ -10,7 +11,11 @@ function Bucket(props) {
 
   return (
     <div onClick={() => props.whenBucketClicked(props.id)}>
-      <h3>{props.name}</h3>
+      <h3>{props.name}
+        {props.vegan &&
+          <Badge pill bg="success">V</Badge>
+        }
+      </h3>
       <p><span style={priceStyle}>{props.price}</span> - {props.description}</p>
       {scoopsLeft
         ? <p>Scoops left: <strong>{props.quantity}</strong></p>
