@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import Badge from "react-bootstrap/Badge";
 
 function Bucket(props) {
-  const scoopsLeft = props.quantity > 0;
   const priceStyle = {
     fontWeight: "bold",
     color: "#00a400"
@@ -17,10 +16,6 @@ function Bucket(props) {
         }
       </h3>
       <p><span style={priceStyle}>{props.price}</span> - {props.description}</p>
-      {scoopsLeft
-        ? <p>Scoops left: <strong>{props.quantity}</strong></p>
-        : <p><strong>This bucket is empty!</strong></p>
-      }
       <hr />
     </div>
   );
