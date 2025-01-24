@@ -24,6 +24,7 @@ function BucketDetail(props) {
         : <p>Scoops left: <strong>{props.quantity}</strong></p>
       }
       <button onClick={() => props.onClickingChangeStock()} disabled={disabled} style={buttonStyles}>Buy</button>
+      <button onClick={() => props.onClickingDelete(item.id)} style={buttonStyles}>Remove Bucket</button>
       <hr />
     </React.Fragment>
   );
@@ -31,6 +32,7 @@ function BucketDetail(props) {
 
 BucketDetail.propTypes = {
   bucket: PropTypes.object,
+  onClickingDelete: PropTypes.func,
   onClickingChangeStock: PropTypes.func
 };
 
