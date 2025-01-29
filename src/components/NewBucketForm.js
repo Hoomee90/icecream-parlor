@@ -8,8 +8,8 @@ function NewBucketForm(props) {
     event.preventDefault();
     props.onNewBucketCreation({
       name: event.target.name.value,
-      description: event.target.name.description,
-      price: event.target.description.value,
+      description: event.target.description.value,
+      price: parseInt(event.target.price.value),
       vegan: event.target?.vegan.value ? true : false,
       quantity: 120,
       id: v4()

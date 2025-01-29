@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Badge from "react-bootstrap/Badge";
 
 function BucketDetail(props) {
   const { bucket } = props;
@@ -15,16 +16,16 @@ function BucketDetail(props) {
   return (
     <React.Fragment>
       <h2>{bucket.name}</h2>
-      <p>{props.vegan &&
+      <p>{bucket.vegan &&
         <Badge pill bg="success">V</Badge>
       }</p>
-      <p><span style={priceStyle}>{props.price}</span> - {bucket.description}</p>
+      <p><span style={priceStyle}>{bucket.price}</span> - {bucket.description}</p>
       {disabled
         ? <p><strong>This bucket is empty!</strong></p>
-        : <p>Scoops left: <strong>{props.quantity}</strong></p>
+        : <p>Scoops left: <strong>{bucket.quantity}</strong></p>
       }
       <button onClick={() => props.onClickingChangeStock()} disabled={disabled} style={buttonStyles}>Buy</button>
-      <button onClick={() => props.onClickingDelete(item.id)} style={buttonStyles}>Remove Bucket</button>
+      <button onClick={() => props.onClickingDelete(bucket.id)} style={buttonStyles}>Remove Bucket</button>
       <hr />
     </React.Fragment>
   );

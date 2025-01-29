@@ -27,7 +27,7 @@ function ReusableForm(props) {
         name="vegan"
         type="checkbox"
         id="vegan"
-        style={displayBlock} />
+      />
       <label for="vegan">Vegan?</label>
       <button type='submit' style={displayBlock}>{props.buttonText}</button>
     </form>
