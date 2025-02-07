@@ -19,7 +19,7 @@ function BucketDetail(props) {
       <p>{bucket.vegan &&
         <Badge pill bg="success">V</Badge>
       }</p>
-      <p><span style={priceStyle}>{bucket.price}</span> - {bucket.description}</p>
+      <p><span style={priceStyle}>${bucket.price}</span> - {bucket.description}</p>
       {disabled
         ? <p><strong>This bucket is empty!</strong></p>
         : <p>Scoops left: <strong>{bucket.quantity}</strong></p>

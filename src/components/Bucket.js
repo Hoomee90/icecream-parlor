@@ -12,10 +12,10 @@ function Bucket(props) {
     <div onClick={() => props.whenBucketClicked(props.id)}>
       <h3>{props.name}
         {props.vegan &&
-          <Badge pill bg="success">V</Badge>
+          <Badge pill bg="success" className="ms-2">V</Badge>
         }
       </h3>
-      <p><span style={priceStyle}>{props.price}</span> - {props.description}</p>
+      <p><span style={priceStyle}>${props.price}</span> - {props.description}</p>
       <hr />
     </div>
   );
