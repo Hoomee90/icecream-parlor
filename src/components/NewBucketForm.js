@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { v4 } from 'uuid';
+import { v4 } from "uuid";
 import ReusableForm from "./ReusableForm";
 
 function NewBucketForm(props) {
@@ -9,8 +9,8 @@ function NewBucketForm(props) {
     props.onNewBucketCreation({
       name: event.target.name.value,
       description: event.target.description.value,
-      price: parseInt(event.target.price.value),
-      vegan: event.target?.vegan.value ? true : false,
+      price: event.target.price.value,
+      vegan: event.target.vegan.value === "true",
       quantity: 120,
       id: v4()
     });

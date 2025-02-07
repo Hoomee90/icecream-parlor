@@ -24,7 +24,7 @@ function Bucket(props) {
 Bucket.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
-  price: PropTypes.number,
+  price: PropTypes.string,
   vegan: PropTypes.bool,
   quantity: PropTypes.number,
   id: PropTypes.string,
